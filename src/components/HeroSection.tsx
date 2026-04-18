@@ -13,25 +13,26 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
       <div className="text-center max-w-lg mx-auto pt-6 pb-6">
 
         <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
 
-          .name-fell {
-            font-family: 'IM Fell English', serif;
+          .name-caslon {
+            font-family: 'Libre Caslon Display', serif;
             font-style: italic;
-            font-size: clamp(2rem, 6vw, 3.4rem);
+            font-size: clamp(1.7rem, 5vw, 2.8rem);
+            font-weight: 400;
             background: linear-gradient(135deg, #f5e17a 0%, #d4a837 45%, #a07828 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             display: block;
-            line-height: 1.3;
+            line-height: 1.35;
             letter-spacing: 0.03em;
             padding: 4px 0;
           }
 
           @keyframes arrowBounce {
-            0%, 100% { transform: translateY(0px);  opacity: 1;   }
-            50%       { transform: translateY(7px);  opacity: 0.6; }
+            0%, 100% { transform: translateY(0px); opacity: 1;   }
+            50%       { transform: translateY(7px); opacity: 0.6; }
           }
         `}</style>
 
@@ -70,7 +71,7 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
             className="animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            <span className="name-fell">Abhiyudaya Srivastava</span>
+            <span className="name-caslon">Abhiyudaya Srivastava</span>
           </div>
 
           {/* Groom Parents */}
@@ -97,7 +98,7 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
             className="animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
-            <span className="name-fell">Divyanshi Srivastava</span>
+            <span className="name-caslon">Divyanshi Srivastava</span>
           </div>
 
           {/* Bride Parents */}
@@ -119,11 +120,11 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
           style={{ animationDelay: "1.55s" }}
         >
           <span style={{
-            fontFamily: "'IM Fell English', serif",
+            fontFamily: "'Libre Caslon Display', serif",
             fontStyle: "italic",
-            fontSize: "11px",
-            letterSpacing: "0.3em",
-            color: "rgba(255,248,220,0.32)",
+            fontSize: "10px",
+            letterSpacing: "0.35em",
+            color: "rgba(255,248,220,0.28)",
           }}>
             scroll
           </span>
