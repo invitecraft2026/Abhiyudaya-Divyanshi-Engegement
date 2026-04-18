@@ -22,7 +22,7 @@ const VideoBackground = ({ visible }: { visible: boolean }) => {
         className="w-full h-full object-cover"
         style={{ filter: "blur(2px) brightness(0.35)" }}
       >
-        <source src="/wedding-bg.mp4" type="video/mp4" />
+        <source src="/wedding-animated-hindu-video.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient overlay */}
