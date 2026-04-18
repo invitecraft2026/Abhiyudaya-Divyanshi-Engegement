@@ -81,9 +81,9 @@ const FloralOverlay = ({ onOpen }: FloralOverlayProps) => {
           You're Invited
         </h1>
 
-        <p className="font-serif text-ivory/80 text-base tracking-[0.2em] uppercase animate-gentle-pulse">
-          Tap anywhere to open the invitation
-        </p>
+       <p className="font-serif font-semibold text-ivory text-base tracking-[0.25em] uppercase animate-gentle-pulse">
+  Tap anywhere to open the invitation
+</p>
       </div>
 
       {/* dark overlay */}

@@ -1,4 +1,5 @@
 import dividerImg from "@/assets/floral-divider.png";
+import ganeshImg from "/ganesh.png";
 
 interface HeroSectionProps {
   visible?: boolean;
@@ -21,22 +22,42 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
         {/* Ceremony label */}
         <p
-          className="font-heading text-ivory/60 text-xs sm:text-sm uppercase tracking-[0.4em] mb-8 animate-fade-up"
+          className="font-heading text-ivory/60 text-xs sm:text-sm uppercase tracking-[0.4em] mb-4 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
           ✦ Engagement Ceremony ✦
         </p>
 
-        {/* Names */}
+        {/* Ganesh Image */}
+        <div
+          className="flex justify-center mb-6 animate-fade-up"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <img
+            src={ganeshImg}
+            alt="Lord Ganesha"
+            className="w-16 sm:w-20 md:w-24 opacity-90"
+          />
+        </div>
+
         <div className="overflow-visible">
 
           {/* Groom */}
           <h1
-            className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-2 tracking-wide animate-soft-glow animate-fade-up"
+            className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-1 tracking-wide animate-soft-glow animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
             Abhiyudaya Srivastava
           </h1>
+
+          {/* Groom Parents */}
+          <p
+            className="font-serif text-ivory/70 text-sm sm:text-base leading-relaxed mb-4 animate-fade-up"
+            style={{ animationDelay: "0.75s" }}
+          >
+            Son of <br />
+            Mr. Girjesh Srivastava & Mrs. Meena Srivastava
+          </p>
 
           {/* & */}
           <p
@@ -48,18 +69,27 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
           {/* Bride */}
           <h1
-            className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-2 tracking-wide animate-soft-glow animate-fade-up"
+            className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-1 tracking-wide animate-soft-glow animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
             Divyanshi Srivastava
           </h1>
+
+          {/* Bride Parents */}
+          <p
+            className="font-serif text-ivory/70 text-sm sm:text-base leading-relaxed mb-2 animate-fade-up"
+            style={{ animationDelay: "1.35s" }}
+          >
+            Daughter of <br />
+            Mr. Rakesh Srivastava & Mrs. Shashi Kala Srivastava
+          </p>
 
         </div>
 
         {/* Divider */}
         <div
           className="my-8 flex justify-center animate-fade-up"
-          style={{ animationDelay: "1.5s" }}
+          style={{ animationDelay: "1.6s" }}
         >
           <img
             src={dividerImg}
@@ -71,17 +101,17 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
         {/* Invitation text */}
         <p
           className="font-serif text-ivory/80 text-lg sm:text-xl leading-relaxed tracking-wide animate-fade-up"
-          style={{ animationDelay: "1.8s" }}
+          style={{ animationDelay: "1.9s" }}
         >
           Together with their families
           <br />
           invite you to celebrate the joyous occasion of their engagement
         </p>
 
-        {/* Engagement quote */}
+        {/* Quote */}
         <p
           className="font-serif text-ivory/50 text-sm sm:text-base italic leading-relaxed mt-6 animate-fade-up"
-          style={{ animationDelay: "2.1s" }}
+          style={{ animationDelay: "2.2s" }}
         >
           "A new journey begins, two hearts unite,  
           and a promise of forever is made."
