@@ -12,6 +12,29 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-24 overflow-visible z-10">
       <div className="text-center max-w-lg mx-auto pt-6 pb-6">
 
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+          .name-fell {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: clamp(2rem, 6vw, 3.4rem);
+            background: linear-gradient(135deg, #f5e17a 0%, #d4a837 45%, #a07828 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            line-height: 1.3;
+            letter-spacing: 0.03em;
+            padding: 4px 0;
+          }
+
+          @keyframes arrowBounce {
+            0%, 100% { transform: translateY(0px);  opacity: 1;   }
+            50%       { transform: translateY(7px);  opacity: 0.6; }
+          }
+        `}</style>
+
         {/* Opening blessing */}
         <p
           className="font-serif text-bougainvillea-light text-sm sm:text-base uppercase tracking-[0.3em] mb-2 animate-fade-up"
@@ -43,12 +66,12 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
         <div className="overflow-visible">
 
           {/* Groom */}
-          <h1
-            className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-1 tracking-wide animate-soft-glow animate-fade-up"
+          <div
+            className="animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            Abhiyudaya Srivastava
-          </h1>
+            <span className="name-fell">Abhiyudaya Srivastava</span>
+          </div>
 
           {/* Groom Parents */}
           <p
@@ -70,12 +93,12 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
           </p>
 
           {/* Bride */}
-          <h1
-            className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-1 tracking-wide animate-soft-glow animate-fade-up"
+          <div
+            className="animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
-            Divyanshi Srivastava
-          </h1>
+            <span className="name-fell">Divyanshi Srivastava</span>
+          </div>
 
           {/* Bride Parents */}
           <p
@@ -95,18 +118,16 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
           className="flex flex-col items-center gap-3 mt-10 mb-2 animate-fade-up"
           style={{ animationDelay: "1.55s" }}
         >
-          {/* Scroll label */}
           <span style={{
-            fontFamily: "serif",
-            fontSize: "9px",
-            letterSpacing: "0.42em",
-            textTransform: "uppercase",
-            color: "rgba(255,248,220,0.38)",
+            fontFamily: "'IM Fell English', serif",
+            fontStyle: "italic",
+            fontSize: "11px",
+            letterSpacing: "0.3em",
+            color: "rgba(255,248,220,0.32)",
           }}>
             scroll
           </span>
 
-          {/* Chunky solid down-arrow — rotated version of client reference */}
           <svg
             width="38"
             height="38"
@@ -122,22 +143,8 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
                 <stop offset="100%" stopColor="#a07828" />
               </linearGradient>
             </defs>
-            {/* Chunky hollow arrow pointing DOWN — same style as reference image */}
             <path
-              d="
-                M28 52
-                L6  30
-                L6  34
-                L18 34
-                L18 8
-                Q18 4 22 4
-                L34 4
-                Q38 4 38 8
-                L38 34
-                L50 34
-                L50 30
-                Z
-              "
+              d="M28 52 L6 30 L6 34 L18 34 L18 8 Q18 4 22 4 L34 4 Q38 4 38 8 L38 34 L50 34 L50 30 Z"
               fill="none"
               stroke="url(#arrowGold)"
               strokeWidth="3.5"
@@ -146,14 +153,6 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
             />
           </svg>
         </div>
-
-        {/* Keyframes */}
-        <style>{`
-          @keyframes arrowBounce {
-            0%, 100% { transform: translateY(0px);  opacity: 1;   }
-            50%       { transform: translateY(7px);  opacity: 0.6; }
-          }
-        `}</style>
 
         {/* Divider */}
         <div
@@ -182,7 +181,7 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
           className="font-serif text-ivory/50 text-sm sm:text-base italic leading-relaxed mt-6 animate-fade-up"
           style={{ animationDelay: "2.2s" }}
         >
-          "A new journey begins, two hearts unite,  
+          "A new journey begins, two hearts unite,
           and a promise of forever is made."
           <br />
           <span className="not-italic tracking-widest text-xs text-gold-gradient opacity-70">
