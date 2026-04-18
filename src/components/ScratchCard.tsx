@@ -31,7 +31,7 @@ const ScratchCard = ({ visible }: { visible: boolean }) => {
       ctx.font = "600 14px 'Playfair Display', serif";
       ctx.textAlign = "center";
       ctx.fillText(
-        "Scratch to reveal the wedding date",
+        "Scratch to reveal the engagement date",
         canvas.offsetWidth / 2,
         canvas.offsetHeight / 2
       );
@@ -76,10 +76,11 @@ const ScratchCard = ({ visible }: { visible: boolean }) => {
   const handleAddToCalendar = () => {
     const params = new URLSearchParams({
       action: "TEMPLATE",
-      text: "Nithin & Blessy's Wedding",
-      dates: "20260510T110000/20260510T130000",
+      text: "Abhiyudaya & Divyanshi Engagement",
+      // IST timezone safe format
+      dates: "20260506T110000/20260506T140000",
       details:
-        "Join us in celebrating the holy matrimony of Nithin & Blessy. By the grace of God, we joyfully invite you to witness their union.",
+        "Join us in celebrating the engagement ceremony of Abhiyudaya & Divyanshi as they begin their beautiful journey together.",
       location: "The Grand Ballroom",
     });
 
@@ -105,14 +106,14 @@ const ScratchCard = ({ visible }: { visible: boolean }) => {
           {/* Revealed content */}
           <div className="text-center py-4">
             <p className="font-heading text-2xl text-primary mb-2">
-              May 10, 2026
+              May 6, 2026
             </p>
             <p className="font-serif text-lg text-muted-foreground">
-              Sunday, 11:00 AM
+              Wednesday, 11:00 AM onwards
             </p>
-            <p className="font-serif text-sm text-bougainvillea-light mt-2">
+            {/* <p className="font-serif text-sm text-bougainvillea-light mt-2">
               The Grand Ballroom
-            </p>
+            </p> */}
           </div>
 
           {/* Scratch overlay */}

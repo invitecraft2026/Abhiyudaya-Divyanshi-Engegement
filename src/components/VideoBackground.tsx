@@ -5,7 +5,7 @@ const VideoBackground = ({ visible }: { visible: boolean }) => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.4; // slow motion (0.5 = half speed)
+      videoRef.current.playbackRate = 0.2; // slow motion (0.5 = half speed)
     }
   }, []);
 

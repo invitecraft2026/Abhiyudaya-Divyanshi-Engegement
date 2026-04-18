@@ -16,7 +16,7 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
           className="font-serif text-bougainvillea-light text-sm sm:text-base uppercase tracking-[0.3em] mb-2 animate-fade-up"
           style={{ animationDelay: "0.2s" }}
         >
-          By the grace of God
+          With the blessings of the Almighty
         </p>
 
         {/* Ceremony label */}
@@ -24,21 +24,21 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
           className="font-heading text-ivory/60 text-xs sm:text-sm uppercase tracking-[0.4em] mb-8 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          ✦ Holy Matrimony ✦
+          ✦ Engagement Ceremony ✦
         </p>
 
-        {/* Names Wrapper (prevents clipping) */}
+        {/* Names */}
         <div className="overflow-visible">
 
-          {/* First Name */}
+          {/* Groom */}
           <h1
             className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-2 tracking-wide animate-soft-glow animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            Nithin Sunny
+            Abhiyudaya Srivastava
           </h1>
 
-          {/* Ampersand */}
+          {/* & */}
           <p
             className="font-heading text-bougainvillea-light text-2xl sm:text-3xl my-3 italic animate-fade-up"
             style={{ animationDelay: "0.9s" }}
@@ -46,17 +46,17 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
             &
           </p>
 
-          {/* Second Name */}
+          {/* Bride */}
           <h1
             className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-gradient leading-[1.3] pt-2 pb-2 tracking-wide animate-soft-glow animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
-            Blessy Ann Jose
+            Divyanshi Srivastava
           </h1>
 
         </div>
 
-        {/* Floral Divider */}
+        {/* Divider */}
         <div
           className="my-8 flex justify-center animate-fade-up"
           style={{ animationDelay: "1.5s" }}
@@ -75,18 +75,19 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
         >
           Together with their families
           <br />
-          invite you to celebrate their wedding
+          invite you to celebrate the joyous occasion of their engagement
         </p>
 
-        {/* Scripture verse */}
+        {/* Engagement quote */}
         <p
           className="font-serif text-ivory/50 text-sm sm:text-base italic leading-relaxed mt-6 animate-fade-up"
           style={{ animationDelay: "2.1s" }}
         >
-          "Two are better than one, for they have a good reward for their toil."
+          "A new journey begins, two hearts unite,  
+          and a promise of forever is made."
           <br />
           <span className="not-italic tracking-widest text-xs text-gold-gradient opacity-70">
-            — Ecclesiastes 4:9
+            — Ring Ceremony
           </span>
         </p>
 

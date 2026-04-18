@@ -3,11 +3,11 @@ import { X } from "lucide-react";
 
 const GALLERY_IMAGES = [
   "/weddingphoto1.jpeg",
-  "/weddingphoto2.jpeg",
-  "/weddingphoto3.jpeg",
   "/weddingphoto4.jpeg",
+  "/weddingphoto2.jpeg",
+  "/weddingphoto5.jpeg",
+  "/weddingphoto3.jpeg",
   "/weddingphoto6.jpeg",
-  "/weddingphoto7.jpeg",
 ];
 
 const PhotoGallery = ({ visible }: { visible: boolean }) => {

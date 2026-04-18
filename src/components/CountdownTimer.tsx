@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const CountdownTimer = ({ visible }: { visible: boolean }) => {
-  // Wedding: May 10, 2026 at 11:00 AM
-  const targetDate = new Date("2026-05-10T11:00:00").getTime();
+  // Engagement: May 6, 2026 at 11:00 AM
+  const targetDate = new Date("2026-05-06T11:00:00").getTime();
 
   const [time, setTime] = useState({
     days: 0,
@@ -13,7 +13,8 @@ const CountdownTimer = ({ visible }: { visible: boolean }) => {
 
   useEffect(() => {
     const tick = () => {
-      const diff = Math.max(0, targetDate - Date.now());
+      const now = Date.now();
+      const diff = Math.max(0, targetDate - now);
 
       setTime({
         days: Math.floor(diff / 86400000),
@@ -47,7 +48,7 @@ const CountdownTimer = ({ visible }: { visible: boolean }) => {
             className="font-display text-3xl sm:text-4xl text-gold-gradient leading-[1.3] py-2 tracking-wide animate-soft-glow animate-fade-up"
             style={{ animationDelay: "2.2s" }}
           >
-            Counting Down
+            Countdown to Engagement
           </h2>
         </div>
 
