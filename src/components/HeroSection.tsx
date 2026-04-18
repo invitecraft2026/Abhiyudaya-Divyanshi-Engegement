@@ -92,67 +92,98 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
         {/* ── Premium Scroll Hint ── */}
         <div
-          className="flex flex-col items-center gap-3 mt-10 mb-2 animate-fade-up"
+          className="flex flex-col items-center gap-2 mt-10 mb-2 animate-fade-up"
           style={{ animationDelay: "1.55s" }}
         >
-          {/* Ornamental side lines + label */}
-          <div className="flex items-center gap-3">
-            <span style={{
-              display: "block",
-              width: "36px",
-              height: "0.5px",
-              background: "linear-gradient(to right, transparent, rgba(212,175,55,0.45))",
-            }} />
-            <span style={{
-              fontFamily: "serif",
-              fontSize: "9px",
-              letterSpacing: "0.38em",
-              textTransform: "uppercase",
-              color: "rgba(255,248,220,0.38)",
-            }}>
-              scroll
-            </span>
-            <span style={{
-              display: "block",
-              width: "36px",
-              height: "0.5px",
-              background: "linear-gradient(to left, transparent, rgba(212,175,55,0.45))",
-            }} />
-          </div>
-
-          {/* Mouse shell */}
-          <div style={{
-            width: "26px",
-            height: "42px",
-            borderRadius: "13px",
-            border: "1px solid rgba(212,175,55,0.35)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            paddingTop: "7px",
-            boxShadow: "0 0 18px rgba(212,175,55,0.08), inset 0 0 10px rgba(212,175,55,0.04)",
-            position: "relative",
+          {/* Scroll label */}
+          <span style={{
+            fontFamily: "serif",
+            fontSize: "9px",
+            letterSpacing: "0.42em",
+            textTransform: "uppercase",
+            color: "rgba(255,248,220,0.32)",
           }}>
-            {/* Scroll wheel pearl */}
+            scroll
+          </span>
+
+          {/* Ornamental arrow assembly — tip points DOWN */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0px" }}>
+
+            {/* Calligraphy downward arrowhead */}
+            <svg
+              width="20"
+              height="28"
+              viewBox="0 0 20 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ animation: "arrowFloat 2.4s ease-in-out infinite" }}
+            >
+              {/* Outer elegant wings */}
+              <path
+                d="M10 28 C10 28, 10 12, 1 6"
+                stroke="rgba(212,175,55,0.35)"
+                strokeWidth="0.75"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path
+                d="M10 28 C10 28, 10 12, 19 6"
+                stroke="rgba(212,175,55,0.35)"
+                strokeWidth="0.75"
+                strokeLinecap="round"
+                fill="none"
+              />
+              {/* Inner crisp arrow strokes */}
+              <path
+                d="M10 22 L3 8"
+                stroke="rgba(212,175,55,0.75)"
+                strokeWidth="0.8"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path
+                d="M10 22 L17 8"
+                stroke="rgba(212,175,55,0.75)"
+                strokeWidth="0.8"
+                strokeLinecap="round"
+                fill="none"
+              />
+              {/* Tip dot at the bottom point */}
+              <circle cx="10" cy="3" r="1.2" fill="rgba(212,175,55,0.6)" />
+            </svg>
+
+            {/* Middle line segment */}
             <div style={{
-              width: "4px",
-              height: "7px",
-              borderRadius: "2px",
-              background: "linear-gradient(180deg, #e8c96a 0%, #c9a84c 100%)",
-              animation: "pearlDrop 2.2s cubic-bezier(0.45,0,0.55,1) infinite",
-              opacity: 0.85,
+              width: "0.5px",
+              height: "14px",
+              background: "rgba(212,175,55,0.45)",
             }} />
+
+            {/* Diamond gem */}
+            <div style={{
+              width: "7px",
+              height: "7px",
+              background: "linear-gradient(135deg, #f0d875 0%, #c9a84c 50%, #a07830 100%)",
+              transform: "rotate(45deg)",
+              boxShadow: "0 0 8px rgba(212,175,55,0.5), 0 0 2px rgba(255,220,80,0.8)",
+              flexShrink: 0,
+            }} />
+
+            {/* Bottom fine line fading out */}
+            <div style={{
+              width: "0.5px",
+              height: "22px",
+              background: "linear-gradient(to bottom, rgba(212,175,55,0.5), transparent)",
+            }} />
+
           </div>
         </div>
 
         {/* Keyframes */}
         <style>{`
-          @keyframes pearlDrop {
-            0%   { transform: translateY(0px);  opacity: 0.85; }
-            40%  { transform: translateY(9px);  opacity: 0.5;  }
-            60%  { transform: translateY(9px);  opacity: 0;    }
-            61%  { transform: translateY(0px);  opacity: 0;    }
-            100% { transform: translateY(0px);  opacity: 0.85; }
+          @keyframes arrowFloat {
+            0%, 100% { transform: translateY(0px);  opacity: 0.9; }
+            50%       { transform: translateY(5px);  opacity: 0.5; }
           }
         `}</style>
 
