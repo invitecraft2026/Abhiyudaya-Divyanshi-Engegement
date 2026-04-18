@@ -86,6 +86,72 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
         </div>
 
+        {/* ── Premium Scroll Hint ── */}
+        <div
+          className="flex flex-col items-center gap-3 mt-10 mb-2 animate-fade-up"
+          style={{ animationDelay: "1.55s" }}
+        >
+          {/* Ornamental side lines + label */}
+          <div className="flex items-center gap-3">
+            <span style={{
+              display: "block",
+              width: "36px",
+              height: "0.5px",
+              background: "linear-gradient(to right, transparent, rgba(212,175,55,0.45))",
+            }} />
+            <span style={{
+              fontFamily: "serif",
+              fontSize: "9px",
+              letterSpacing: "0.38em",
+              textTransform: "uppercase",
+              color: "rgba(255,248,220,0.38)",
+            }}>
+              scroll
+            </span>
+            <span style={{
+              display: "block",
+              width: "36px",
+              height: "0.5px",
+              background: "linear-gradient(to left, transparent, rgba(212,175,55,0.45))",
+            }} />
+          </div>
+
+          {/* Mouse shell */}
+          <div style={{
+            width: "26px",
+            height: "42px",
+            borderRadius: "13px",
+            border: "1px solid rgba(212,175,55,0.35)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            paddingTop: "7px",
+            boxShadow: "0 0 18px rgba(212,175,55,0.08), inset 0 0 10px rgba(212,175,55,0.04)",
+            position: "relative",
+          }}>
+            {/* Scroll wheel pearl */}
+            <div style={{
+              width: "4px",
+              height: "7px",
+              borderRadius: "2px",
+              background: "linear-gradient(180deg, #e8c96a 0%, #c9a84c 100%)",
+              animation: "pearlDrop 2.2s cubic-bezier(0.45,0,0.55,1) infinite",
+              opacity: 0.85,
+            }} />
+          </div>
+        </div>
+
+        {/* Keyframes */}
+        <style>{`
+          @keyframes pearlDrop {
+            0%   { transform: translateY(0px);  opacity: 0.85; }
+            40%  { transform: translateY(9px);  opacity: 0.5;  }
+            60%  { transform: translateY(9px);  opacity: 0;    }
+            61%  { transform: translateY(0px);  opacity: 0;    }
+            100% { transform: translateY(0px);  opacity: 0.85; }
+          }
+        `}</style>
+
         {/* Divider */}
         <div
           className="my-8 flex justify-center animate-fade-up"
