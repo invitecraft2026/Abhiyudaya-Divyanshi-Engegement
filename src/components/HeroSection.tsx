@@ -92,7 +92,7 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
         {/* ── Premium Scroll Hint ── */}
         <div
-          className="flex flex-col items-center gap-2 mt-10 mb-2 animate-fade-up"
+          className="flex flex-col items-center gap-3 mt-10 mb-2 animate-fade-up"
           style={{ animationDelay: "1.55s" }}
         >
           {/* Scroll label */}
@@ -101,89 +101,57 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
             fontSize: "9px",
             letterSpacing: "0.42em",
             textTransform: "uppercase",
-            color: "rgba(255,248,220,0.32)",
+            color: "rgba(255,248,220,0.38)",
           }}>
             scroll
           </span>
 
-          {/* Ornamental arrow assembly — tip points DOWN */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0px" }}>
-
-            {/* Calligraphy downward arrowhead */}
-            <svg
-              width="20"
-              height="28"
-              viewBox="0 0 20 28"
+          {/* Chunky solid down-arrow — rotated version of client reference */}
+          <svg
+            width="38"
+            height="38"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ animation: "arrowBounce 2s ease-in-out infinite" }}
+          >
+            <defs>
+              <linearGradient id="arrowGold" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#f5e17a" />
+                <stop offset="50%" stopColor="#d4a837" />
+                <stop offset="100%" stopColor="#a07828" />
+              </linearGradient>
+            </defs>
+            {/* Chunky hollow arrow pointing DOWN — same style as reference image */}
+            <path
+              d="
+                M28 52
+                L6  30
+                L6  34
+                L18 34
+                L18 8
+                Q18 4 22 4
+                L34 4
+                Q38 4 38 8
+                L38 34
+                L50 34
+                L50 30
+                Z
+              "
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ animation: "arrowFloat 2.4s ease-in-out infinite" }}
-            >
-              {/* Outer elegant wings */}
-              <path
-                d="M10 28 C10 28, 10 12, 1 6"
-                stroke="rgba(212,175,55,0.35)"
-                strokeWidth="0.75"
-                strokeLinecap="round"
-                fill="none"
-              />
-              <path
-                d="M10 28 C10 28, 10 12, 19 6"
-                stroke="rgba(212,175,55,0.35)"
-                strokeWidth="0.75"
-                strokeLinecap="round"
-                fill="none"
-              />
-              {/* Inner crisp arrow strokes */}
-              <path
-                d="M10 22 L3 8"
-                stroke="rgba(212,175,55,0.75)"
-                strokeWidth="0.8"
-                strokeLinecap="round"
-                fill="none"
-              />
-              <path
-                d="M10 22 L17 8"
-                stroke="rgba(212,175,55,0.75)"
-                strokeWidth="0.8"
-                strokeLinecap="round"
-                fill="none"
-              />
-              {/* Tip dot at the bottom point */}
-              <circle cx="10" cy="3" r="1.2" fill="rgba(212,175,55,0.6)" />
-            </svg>
-
-            {/* Middle line segment */}
-            <div style={{
-              width: "0.5px",
-              height: "14px",
-              background: "rgba(212,175,55,0.45)",
-            }} />
-
-            {/* Diamond gem */}
-            <div style={{
-              width: "7px",
-              height: "7px",
-              background: "linear-gradient(135deg, #f0d875 0%, #c9a84c 50%, #a07830 100%)",
-              transform: "rotate(45deg)",
-              boxShadow: "0 0 8px rgba(212,175,55,0.5), 0 0 2px rgba(255,220,80,0.8)",
-              flexShrink: 0,
-            }} />
-
-            {/* Bottom fine line fading out */}
-            <div style={{
-              width: "0.5px",
-              height: "22px",
-              background: "linear-gradient(to bottom, rgba(212,175,55,0.5), transparent)",
-            }} />
-
-          </div>
+              stroke="url(#arrowGold)"
+              strokeWidth="3.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+          </svg>
         </div>
 
         {/* Keyframes */}
         <style>{`
-          @keyframes arrowFloat {
-            0%, 100% { transform: translateY(0px);  opacity: 0.9; }
-            50%       { transform: translateY(5px);  opacity: 0.5; }
+          @keyframes arrowBounce {
+            0%, 100% { transform: translateY(0px);  opacity: 1;   }
+            50%       { transform: translateY(7px);  opacity: 0.6; }
           }
         `}</style>
 
