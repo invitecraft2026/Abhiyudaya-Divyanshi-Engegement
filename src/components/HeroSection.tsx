@@ -52,11 +52,13 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
           {/* Groom Parents */}
           <p
-            className="font-serif text-ivory/70 text-sm sm:text-base leading-relaxed mb-4 animate-fade-up"
-            style={{ animationDelay: "0.75s" }}
+            className="font-serif text-ivory/80 text-sm sm:text-base leading-relaxed mb-4 animate-fade-up"
+            style={{ animationDelay: "0.75s", fontWeight: 500 }}
           >
             Son of <br />
-            Mr. Girjesh Srivastava & Mrs. Meena Srivastava
+            <span style={{ fontWeight: 600, letterSpacing: "0.02em" }}>
+              Mr. Girjesh Srivastava & Mrs. Meena Srivastava
+            </span>
           </p>
 
           {/* & */}
@@ -77,11 +79,13 @@ const HeroSection = ({ visible = true }: HeroSectionProps) => {
 
           {/* Bride Parents */}
           <p
-            className="font-serif text-ivory/70 text-sm sm:text-base leading-relaxed mb-2 animate-fade-up"
-            style={{ animationDelay: "1.35s" }}
+            className="font-serif text-ivory/80 text-sm sm:text-base leading-relaxed mb-2 animate-fade-up"
+            style={{ animationDelay: "1.35s", fontWeight: 500 }}
           >
             Daughter of <br />
-            Mr. Rakesh Srivastava & Mrs. Shashi Kala Srivastava
+            <span style={{ fontWeight: 600, letterSpacing: "0.02em" }}>
+              Mr. Rakesh Srivastava & Mrs. Shashi Kala Srivastava
+            </span>
           </p>
 
         </div>
